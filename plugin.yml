@@ -1,0 +1,8 @@
+name: SBmenu
+main: me.dubdesigns.sbmenu.main
+version: 1.0
+author: _DuB_
+softdepend: [PlaceholderAPI]
+commands:
+   server:
+      description: test
