@@ -1,5 +1,5 @@
 name: SBmenu
-main: me.dubdesigns.sbmenu.main
+main: me.dubdesigns.sbmenu.Main
 version: 1.0
 author: _DuB_
 softdepend: [PlaceholderAPI]

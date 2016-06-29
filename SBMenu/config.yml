@@ -1,0 +1,37 @@
+Menu: 'Server selector'
+Menus:
+  1:
+    item: GRASS
+    name: '&aSkyblock'
+    lore:
+      - 'Click to join.'
+      - '0/100'
+    connect: skyblock
+  2:
+    item: STONE
+    name: '&aSkyblock'
+    lore:
+      - 'Click to join.'
+      - '0/100'
+    connect: skyblock
+  3:
+    item: GRASS
+    name: '&aSkyblock'
+    lore:
+      - 'Click to join.'
+      - '0/100'
+    connect: skyblock
+  4:
+    item: STONE
+    name: '&aSkyblock'
+    lore:
+      - 'Click to join.'
+      - '0/100'
+    connect: skyblock
+  5:
+    item: GRASS
+    name: '&aSkyblock'
+    lore:
+      - 'Click to join.'
+      - '0/100'
+    connect: skyblock
