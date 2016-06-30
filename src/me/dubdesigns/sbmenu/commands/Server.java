@@ -1,5 +1,8 @@
 package me.dubdesigns.sbmenu.commands;
 
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
+
 import me.dubdesigns.sbmenu.Main;
 import me.dubdesigns.sbmenu.MenuManager;
 
@@ -18,10 +21,25 @@ public class Server implements CommandExecutor {
 	@Override
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
         Player player = (Player) sender;
-        if(commandLabel.equalsIgnoreCase("server")){
+        if(cmd.getName().equalsIgnoreCase("server")){
         	MenuManager.openMenu(player);
         }
-        return false;
+        if(cmd.getName().equalsIgnoreCase("sbmenureload")) {
+        	plugin.reloadConfig();
+        	sender.sendMessage("§aSBmenu is reloaded.");
+        }
+        if(cmd.getName().equalsIgnoreCase("joinserver")) {
+    		ByteArrayOutputStream b = new ByteArrayOutputStream();
+    		DataOutputStream out = new DataOutputStream(b);
+            try {
+            	out.writeUTF("Connect");
+            	out.writeUTF(args[0]);
+            } catch (Exception e1) {
+            	e1.printStackTrace();
+            }
+            player.sendPluginMessage(plugin, "BungeeCord", b.toByteArray());
+        }
+        return true;
     }
 
 }
